@@ -2,6 +2,9 @@
  * commondefs.h
  */
 
+#ifndef COMMONDEFS_H
+#define COMMONDEFS_H
+
 enum endpoint {
     account,
     instrument,
@@ -11,4 +14,6 @@ enum endpoint {
     transaction,
     pricing,
 };
+
+#endif
 
