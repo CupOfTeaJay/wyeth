@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Melchizedek.dir/source/main.cpp.o"
-  "CMakeFiles/Melchizedek.dir/source/main.cpp.o.d"
+  "CMakeFiles/Melchizedek.dir/src/main.cpp.o"
+  "CMakeFiles/Melchizedek.dir/src/main.cpp.o.d"
   "Melchizedek"
   "Melchizedek.pdb"
 )

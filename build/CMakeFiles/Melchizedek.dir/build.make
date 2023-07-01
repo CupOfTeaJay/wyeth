@@ -69,30 +69,32 @@ include CMakeFiles/Melchizedek.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Melchizedek.dir/flags.make
 
-CMakeFiles/Melchizedek.dir/source/main.cpp.o: CMakeFiles/Melchizedek.dir/flags.make
-CMakeFiles/Melchizedek.dir/source/main.cpp.o: /Users/cupofteajay/github/melchizedek/source/main.cpp
-CMakeFiles/Melchizedek.dir/source/main.cpp.o: CMakeFiles/Melchizedek.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cupofteajay/github/melchizedek/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Melchizedek.dir/source/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Melchizedek.dir/source/main.cpp.o -MF CMakeFiles/Melchizedek.dir/source/main.cpp.o.d -o CMakeFiles/Melchizedek.dir/source/main.cpp.o -c /Users/cupofteajay/github/melchizedek/source/main.cpp
+CMakeFiles/Melchizedek.dir/src/main.cpp.o: CMakeFiles/Melchizedek.dir/flags.make
+CMakeFiles/Melchizedek.dir/src/main.cpp.o: /Users/cupofteajay/github/melchizedek/src/main.cpp
+CMakeFiles/Melchizedek.dir/src/main.cpp.o: CMakeFiles/Melchizedek.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cupofteajay/github/melchizedek/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Melchizedek.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Melchizedek.dir/src/main.cpp.o -MF CMakeFiles/Melchizedek.dir/src/main.cpp.o.d -o CMakeFiles/Melchizedek.dir/src/main.cpp.o -c /Users/cupofteajay/github/melchizedek/src/main.cpp
 
-CMakeFiles/Melchizedek.dir/source/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Melchizedek.dir/source/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cupofteajay/github/melchizedek/source/main.cpp > CMakeFiles/Melchizedek.dir/source/main.cpp.i
+CMakeFiles/Melchizedek.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Melchizedek.dir/src/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cupofteajay/github/melchizedek/src/main.cpp > CMakeFiles/Melchizedek.dir/src/main.cpp.i
 
-CMakeFiles/Melchizedek.dir/source/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Melchizedek.dir/source/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cupofteajay/github/melchizedek/source/main.cpp -o CMakeFiles/Melchizedek.dir/source/main.cpp.s
+CMakeFiles/Melchizedek.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Melchizedek.dir/src/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cupofteajay/github/melchizedek/src/main.cpp -o CMakeFiles/Melchizedek.dir/src/main.cpp.s
 
 # Object files for target Melchizedek
 Melchizedek_OBJECTS = \
-"CMakeFiles/Melchizedek.dir/source/main.cpp.o"
+"CMakeFiles/Melchizedek.dir/src/main.cpp.o"
 
 # External object files for target Melchizedek
 Melchizedek_EXTERNAL_OBJECTS =
 
-Melchizedek: CMakeFiles/Melchizedek.dir/source/main.cpp.o
+Melchizedek: CMakeFiles/Melchizedek.dir/src/main.cpp.o
 Melchizedek: CMakeFiles/Melchizedek.dir/build.make
-Melchizedek: libOpenSSL.a
+Melchizedek: /opt/homebrew/Cellar/openssl@3/3.1.1_1/lib/libcrypto.dylib
+Melchizedek: /opt/homebrew/Cellar/openssl@3/3.1.1_1/lib/libssl.dylib
+Melchizedek: /opt/homebrew/Cellar/openssl@3/3.1.1_1/lib/libcrypto.dylib
 Melchizedek: CMakeFiles/Melchizedek.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cupofteajay/github/melchizedek/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Melchizedek"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Melchizedek.dir/link.txt --verbose=$(VERBOSE)

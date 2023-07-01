@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named OpenSSL
-
-# Build rule for target.
-OpenSSL: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OpenSSL
-.PHONY : OpenSSL
-
-# fast build rule for target.
-OpenSSL/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenSSL.dir/build.make CMakeFiles/OpenSSL.dir/build
-.PHONY : OpenSSL/fast
-
-#=============================================================================
 # Target rules for targets named Melchizedek
 
 # Build rule for target.
@@ -142,29 +129,29 @@ Melchizedek/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/build
 .PHONY : Melchizedek/fast
 
-source/main.o: source/main.cpp.o
-.PHONY : source/main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-source/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/source/main.cpp.o
-.PHONY : source/main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-source/main.i: source/main.cpp.i
-.PHONY : source/main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-source/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/source/main.cpp.i
-.PHONY : source/main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-source/main.s: source/main.cpp.s
-.PHONY : source/main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-source/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/source/main.cpp.s
-.PHONY : source/main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -175,10 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Melchizedek"
-	@echo "... OpenSSL"
-	@echo "... source/main.o"
-	@echo "... source/main.i"
-	@echo "... source/main.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

@@ -1,4 +1,3 @@
-/Users/cupofteajay/github/melchizedek/build/CMakeFiles/OpenSSL.dir
 /Users/cupofteajay/github/melchizedek/build/CMakeFiles/Melchizedek.dir
 /Users/cupofteajay/github/melchizedek/build/CMakeFiles/edit_cache.dir
 /Users/cupofteajay/github/melchizedek/build/CMakeFiles/rebuild_cache.dir

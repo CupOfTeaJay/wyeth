@@ -8,10 +8,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/Users/cupofteajay/github/melchizedek/CMakeLists.txt"
-  "CMakeFiles/3.26.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.26.4/CMakeSystem.cmake"
-  "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeGenericSystem.cmake"
@@ -19,14 +17,15 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeLanguageInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Compiler/AppleClang-C.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Compiler/AppleClang-CXX.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Compiler/Clang.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Compiler/GNU.cmake"
-  "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake"
+  "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/FindOpenSSL.cmake"
+  "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+  "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/FindPackageMessage.cmake"
+  "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/FindPkgConfig.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
-  "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Platform/Apple-Clang-C.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Platform/Apple-Clang.cmake"
   "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
@@ -47,6 +46,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/OpenSSL.dir/DependInfo.cmake"
   "CMakeFiles/Melchizedek.dir/DependInfo.cmake"
   )

@@ -1,17 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(Melchizedek)
+if(${CMAKE_VERSION} VERSION_LESS 3.26)
+    cmake_policy(VERSION ${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION})
+endif()
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set (CMAKE_CXX_STANDARD 20)
 
-ADD_LIBRARY(OpenSSL
-    /usr/local/lib/libcrypto.a
-    /usr/local/lib/libssl.a)
+include(FindOpenSSL)
 
-set_target_properties(OpenSSL PROPERTIES LINKER_LANGUAGE CXX)
+project(Melchizedek 
+    VERSION 1.0
+    DESCRIPTION "Very nice project"
+    LANGUAGES CXX)
 
-add_executable(Melchizedek source/main.cpp)
+add_executable(Melchizedek src/main.cpp)
 
-target_link_libraries(Melchizedek OpenSSL)
+target_link_libraries(Melchizedek PUBLIC OpenSSL::Crypto)
+target_link_libraries(Melchizedek PUBLIC OpenSSL::SSL)
 

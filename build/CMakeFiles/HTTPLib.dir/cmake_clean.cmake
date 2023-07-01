@@ -1,5 +1,5 @@
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )
-  include(CMakeFiles/OpenSSL.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/HTTPLib.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()
