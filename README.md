@@ -1,2 +1,3 @@
-# melchizedek
-Oanda stuff.
+# wyeth
+
+Dependencies: httplib, OpenSSL
