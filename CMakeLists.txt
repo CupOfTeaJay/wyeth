@@ -8,13 +8,13 @@ set (CMAKE_CXX_STANDARD 20)
 
 include(FindOpenSSL)
 
-project(Melchizedek 
+project(Wyeth
     VERSION 1.0
     DESCRIPTION "Very nice project"
     LANGUAGES CXX)
 
-add_executable(Melchizedek src/main.cpp)
+add_executable(Wyeth src/main.cpp)
 
-target_link_libraries(Melchizedek PUBLIC OpenSSL::Crypto)
-target_link_libraries(Melchizedek PUBLIC OpenSSL::SSL)
+target_link_libraries(Wyeth PUBLIC OpenSSL::Crypto)
+target_link_libraries(Wyeth PUBLIC OpenSSL::SSL)
 

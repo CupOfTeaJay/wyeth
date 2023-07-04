@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/cupofteajay/github/melchizedek/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Melchizedek.dir/all
+all: CMakeFiles/Wyeth.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Melchizedek.dir/clean
+clean: CMakeFiles/Wyeth.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Melchizedek.dir
+# Target rules for target CMakeFiles/Wyeth.dir
 
 # All Build rule for target.
-CMakeFiles/Melchizedek.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/cupofteajay/github/melchizedek/build/CMakeFiles --progress-num=1,2 "Built target Melchizedek"
-.PHONY : CMakeFiles/Melchizedek.dir/all
+CMakeFiles/Wyeth.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Wyeth.dir/build.make CMakeFiles/Wyeth.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Wyeth.dir/build.make CMakeFiles/Wyeth.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/cupofteajay/github/melchizedek/build/CMakeFiles --progress-num=1,2 "Built target Wyeth"
+.PHONY : CMakeFiles/Wyeth.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Melchizedek.dir/rule: cmake_check_build_system
+CMakeFiles/Wyeth.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/melchizedek/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Melchizedek.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Wyeth.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/melchizedek/build/CMakeFiles 0
-.PHONY : CMakeFiles/Melchizedek.dir/rule
+.PHONY : CMakeFiles/Wyeth.dir/rule
 
 # Convenience name for target.
-Melchizedek: CMakeFiles/Melchizedek.dir/rule
-.PHONY : Melchizedek
+Wyeth: CMakeFiles/Wyeth.dir/rule
+.PHONY : Wyeth
 
 # clean rule for target.
-CMakeFiles/Melchizedek.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Melchizedek.dir/build.make CMakeFiles/Melchizedek.dir/clean
-.PHONY : CMakeFiles/Melchizedek.dir/clean
+CMakeFiles/Wyeth.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Wyeth.dir/build.make CMakeFiles/Wyeth.dir/clean
+.PHONY : CMakeFiles/Wyeth.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
