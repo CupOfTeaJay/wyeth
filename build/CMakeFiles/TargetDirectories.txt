@@ -1,3 +1,6 @@
-/Users/cupofteajay/github/melchizedek/build/CMakeFiles/Wyeth.dir
-/Users/cupofteajay/github/melchizedek/build/CMakeFiles/edit_cache.dir
-/Users/cupofteajay/github/melchizedek/build/CMakeFiles/rebuild_cache.dir
+/Users/cupofteajay/github/repos/wyeth/build/CMakeFiles/Wyeth.dir
+/Users/cupofteajay/github/repos/wyeth/build/CMakeFiles/edit_cache.dir
+/Users/cupofteajay/github/repos/wyeth/build/CMakeFiles/rebuild_cache.dir
+/Users/cupofteajay/github/repos/wyeth/build/include/HTTPLib/CMakeFiles/HTTPLib.dir
+/Users/cupofteajay/github/repos/wyeth/build/include/HTTPLib/CMakeFiles/edit_cache.dir
+/Users/cupofteajay/github/repos/wyeth/build/include/HTTPLib/CMakeFiles/rebuild_cache.dir

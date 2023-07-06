@@ -54,41 +54,58 @@ RM = /opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/cupofteajay/github/melchizedek
+CMAKE_SOURCE_DIR = /Users/cupofteajay/github/repos/wyeth
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/cupofteajay/github/melchizedek/build
+CMAKE_BINARY_DIR = /Users/cupofteajay/github/repos/wyeth/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/Wyeth.dir/all
+all: include/HTTPLib/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: include/HTTPLib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Wyeth.dir/clean
+clean: include/HTTPLib/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory include/HTTPLib
+
+# Recursive "all" directory target.
+include/HTTPLib/all: include/HTTPLib/CMakeFiles/HTTPLib.dir/all
+.PHONY : include/HTTPLib/all
+
+# Recursive "preinstall" directory target.
+include/HTTPLib/preinstall:
+.PHONY : include/HTTPLib/preinstall
+
+# Recursive "clean" directory target.
+include/HTTPLib/clean: include/HTTPLib/CMakeFiles/HTTPLib.dir/clean
+.PHONY : include/HTTPLib/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Wyeth.dir
 
 # All Build rule for target.
-CMakeFiles/Wyeth.dir/all:
+CMakeFiles/Wyeth.dir/all: include/HTTPLib/CMakeFiles/HTTPLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Wyeth.dir/build.make CMakeFiles/Wyeth.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Wyeth.dir/build.make CMakeFiles/Wyeth.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/cupofteajay/github/melchizedek/build/CMakeFiles --progress-num=1,2 "Built target Wyeth"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/cupofteajay/github/repos/wyeth/build/CMakeFiles --progress-num=3,4 "Built target Wyeth"
 .PHONY : CMakeFiles/Wyeth.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Wyeth.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/melchizedek/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/repos/wyeth/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Wyeth.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/melchizedek/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/repos/wyeth/build/CMakeFiles 0
 .PHONY : CMakeFiles/Wyeth.dir/rule
 
 # Convenience name for target.
@@ -99,6 +116,32 @@ Wyeth: CMakeFiles/Wyeth.dir/rule
 CMakeFiles/Wyeth.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Wyeth.dir/build.make CMakeFiles/Wyeth.dir/clean
 .PHONY : CMakeFiles/Wyeth.dir/clean
+
+#=============================================================================
+# Target rules for target include/HTTPLib/CMakeFiles/HTTPLib.dir
+
+# All Build rule for target.
+include/HTTPLib/CMakeFiles/HTTPLib.dir/all:
+	$(MAKE) $(MAKESILENT) -f include/HTTPLib/CMakeFiles/HTTPLib.dir/build.make include/HTTPLib/CMakeFiles/HTTPLib.dir/depend
+	$(MAKE) $(MAKESILENT) -f include/HTTPLib/CMakeFiles/HTTPLib.dir/build.make include/HTTPLib/CMakeFiles/HTTPLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/cupofteajay/github/repos/wyeth/build/CMakeFiles --progress-num=1,2 "Built target HTTPLib"
+.PHONY : include/HTTPLib/CMakeFiles/HTTPLib.dir/all
+
+# Build rule for subdir invocation for target.
+include/HTTPLib/CMakeFiles/HTTPLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/repos/wyeth/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/HTTPLib/CMakeFiles/HTTPLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/repos/wyeth/build/CMakeFiles 0
+.PHONY : include/HTTPLib/CMakeFiles/HTTPLib.dir/rule
+
+# Convenience name for target.
+HTTPLib: include/HTTPLib/CMakeFiles/HTTPLib.dir/rule
+.PHONY : HTTPLib
+
+# clean rule for target.
+include/HTTPLib/CMakeFiles/HTTPLib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f include/HTTPLib/CMakeFiles/HTTPLib.dir/build.make include/HTTPLib/CMakeFiles/HTTPLib.dir/clean
+.PHONY : include/HTTPLib/CMakeFiles/HTTPLib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

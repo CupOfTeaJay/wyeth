@@ -6,15 +6,14 @@ endif()
 
 set (CMAKE_CXX_STANDARD 20)
 
-include(FindOpenSSL)
-
 project(Wyeth
     VERSION 1.0
-    DESCRIPTION "Very nice project"
+    DESCRIPTION "A very cool project"
     LANGUAGES CXX)
 
 add_executable(Wyeth src/main.cpp)
 
-target_link_libraries(Wyeth PUBLIC OpenSSL::Crypto)
-target_link_libraries(Wyeth PUBLIC OpenSSL::SSL)
+add_subdirectory(include/HTTPLib)
+
+target_link_libraries(Wyeth PUBLIC HTTPLib)
 
