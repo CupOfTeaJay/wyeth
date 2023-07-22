@@ -4,7 +4,8 @@
 
 #pragma once
 
-#include<../../HTTPLib/include/httplib.h>
+#include <endpoint.h>
+#include <httplib.h>
 #include <string>
 #include <vector>
 
@@ -16,7 +17,7 @@ class API
      * Constructor for the "API" class.
      */
     explicit API(const std::string uri,
-                 const std::vector<const std::string> endpoints);
+                 const std::vector<const Endpoint> endpoints);
 
     /**
      * Destructor for the "API" class.
@@ -26,7 +27,7 @@ class API
     /**
      * Gets the requested API resource.
      */
-    auto queryEndpoint(const std::string& endpoint);
+    auto queryEndpoint(const Endpoint& endpoint);
 
     private:
 

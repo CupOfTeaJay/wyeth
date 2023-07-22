@@ -2,13 +2,13 @@
  * \file api.cpp
  */
 
-#include <../include/api.h>
+#include <api.h>
 
 /**
  * Constructor for the "API" class.
  */
 API::API(const std::string uri,
-         const std::vector<const std::string> endpoints)
+         const std::vector<const Endpoint> endpoints)
          :
          uri(uri),
          client(this->uri),
@@ -26,8 +26,22 @@ API::~API()
 /**
  * Querys an API endpoint.
  */
-auto API::queryEndpoint(const std::string& endpoint)
+auto API::queryEndpoint(const Endpoint& endpoint)
 {
-    auto response{this->client.Get(endpoint)}; // TODO: Should probably encapsulate "endpoint".
-    return response;                           //       The client doesn't have to just "Get".
+    if (endpoint.method == Request_Method::GET)        // GET resource.
+    {                                                  //
+        return this->client.Get(endpoint.uri);         //
+    }
+    else if (endpoint.method == Request_Method::PATCH) // PATCH resource.
+    {                                                  //
+        return this->client.Patch(endpoint.uri);       //
+    }
+    else if (endpoint.method == Request_Method::POST)  // POST resource.
+    {                                                  //
+        return this->client.Post(endpoint.uri);        //
+    }
+    else if (endpoint.method == Request_Method::PUT)   // PUT resource.
+    {                                                  //
+        return this->client.Put(endpoint.uri);         //
+    }
 }
