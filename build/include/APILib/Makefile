@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/my-repos/wyeth/build/CMakeFiles /Users/cupofteajay/github/my-repos/wyeth/build/include/HTTPLib//CMakeFiles/progress.marks
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/HTTPLib/all
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/my-repos/wyeth/build/CMakeFiles /Users/cupofteajay/github/my-repos/wyeth/build/include/APILib//CMakeFiles/progress.marks
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/APILib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cupofteajay/github/my-repos/wyeth/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/HTTPLib/clean
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/APILib/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,12 +103,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/HTTPLib/preinstall
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/APILib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/HTTPLib/preinstall
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/APILib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -117,42 +117,66 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-include/HTTPLib/CMakeFiles/HTTPLib.dir/rule:
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/HTTPLib/CMakeFiles/HTTPLib.dir/rule
-.PHONY : include/HTTPLib/CMakeFiles/HTTPLib.dir/rule
+include/APILib/CMakeFiles/APILib.dir/rule:
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/APILib/CMakeFiles/APILib.dir/rule
+.PHONY : include/APILib/CMakeFiles/APILib.dir/rule
 
 # Convenience name for target.
-HTTPLib: include/HTTPLib/CMakeFiles/HTTPLib.dir/rule
-.PHONY : HTTPLib
+APILib: include/APILib/CMakeFiles/APILib.dir/rule
+.PHONY : APILib
 
 # fast build rule for target.
-HTTPLib/fast:
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/HTTPLib/CMakeFiles/HTTPLib.dir/build.make include/HTTPLib/CMakeFiles/HTTPLib.dir/build
-.PHONY : HTTPLib/fast
+APILib/fast:
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/APILib/CMakeFiles/APILib.dir/build.make include/APILib/CMakeFiles/APILib.dir/build
+.PHONY : APILib/fast
 
-src/httplib.o: src/httplib.cpp.o
-.PHONY : src/httplib.o
+src/api.o: src/api.cpp.o
+.PHONY : src/api.o
 
 # target to build an object file
-src/httplib.cpp.o:
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/HTTPLib/CMakeFiles/HTTPLib.dir/build.make include/HTTPLib/CMakeFiles/HTTPLib.dir/src/httplib.cpp.o
-.PHONY : src/httplib.cpp.o
+src/api.cpp.o:
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/APILib/CMakeFiles/APILib.dir/build.make include/APILib/CMakeFiles/APILib.dir/src/api.cpp.o
+.PHONY : src/api.cpp.o
 
-src/httplib.i: src/httplib.cpp.i
-.PHONY : src/httplib.i
+src/api.i: src/api.cpp.i
+.PHONY : src/api.i
 
 # target to preprocess a source file
-src/httplib.cpp.i:
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/HTTPLib/CMakeFiles/HTTPLib.dir/build.make include/HTTPLib/CMakeFiles/HTTPLib.dir/src/httplib.cpp.i
-.PHONY : src/httplib.cpp.i
+src/api.cpp.i:
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/APILib/CMakeFiles/APILib.dir/build.make include/APILib/CMakeFiles/APILib.dir/src/api.cpp.i
+.PHONY : src/api.cpp.i
 
-src/httplib.s: src/httplib.cpp.s
-.PHONY : src/httplib.s
+src/api.s: src/api.cpp.s
+.PHONY : src/api.s
 
 # target to generate assembly for a file
-src/httplib.cpp.s:
-	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/HTTPLib/CMakeFiles/HTTPLib.dir/build.make include/HTTPLib/CMakeFiles/HTTPLib.dir/src/httplib.cpp.s
-.PHONY : src/httplib.cpp.s
+src/api.cpp.s:
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/APILib/CMakeFiles/APILib.dir/build.make include/APILib/CMakeFiles/APILib.dir/src/api.cpp.s
+.PHONY : src/api.cpp.s
+
+src/endpoint.o: src/endpoint.cpp.o
+.PHONY : src/endpoint.o
+
+# target to build an object file
+src/endpoint.cpp.o:
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/APILib/CMakeFiles/APILib.dir/build.make include/APILib/CMakeFiles/APILib.dir/src/endpoint.cpp.o
+.PHONY : src/endpoint.cpp.o
+
+src/endpoint.i: src/endpoint.cpp.i
+.PHONY : src/endpoint.i
+
+# target to preprocess a source file
+src/endpoint.cpp.i:
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/APILib/CMakeFiles/APILib.dir/build.make include/APILib/CMakeFiles/APILib.dir/src/endpoint.cpp.i
+.PHONY : src/endpoint.cpp.i
+
+src/endpoint.s: src/endpoint.cpp.s
+.PHONY : src/endpoint.s
+
+# target to generate assembly for a file
+src/endpoint.cpp.s:
+	cd /Users/cupofteajay/github/my-repos/wyeth/build && $(MAKE) $(MAKESILENT) -f include/APILib/CMakeFiles/APILib.dir/build.make include/APILib/CMakeFiles/APILib.dir/src/endpoint.cpp.s
+.PHONY : src/endpoint.cpp.s
 
 # Help Target
 help:
@@ -162,10 +186,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... HTTPLib"
-	@echo "... src/httplib.o"
-	@echo "... src/httplib.i"
-	@echo "... src/httplib.s"
+	@echo "... APILib"
+	@echo "... src/api.o"
+	@echo "... src/api.i"
+	@echo "... src/api.s"
+	@echo "... src/endpoint.o"
+	@echo "... src/endpoint.i"
+	@echo "... src/endpoint.s"
 .PHONY : help
 
 

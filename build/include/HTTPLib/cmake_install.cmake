@@ -1,4 +1,4 @@
-# Install script for directory: /Users/cupofteajay/github/repos/wyeth/include/HTTPLib
+# Install script for directory: /Users/cupofteajay/github/my-repos/wyeth/include/HTTPLib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

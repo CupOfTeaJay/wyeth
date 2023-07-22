@@ -14,6 +14,6 @@ project(Wyeth
 add_executable(Wyeth src/main.cpp)
 
 add_subdirectory(include/HTTPLib)
+add_subdirectory(include/APILib)
 
-target_link_libraries(Wyeth PUBLIC HTTPLib)
-
+target_link_libraries(Wyeth PUBLIC APILib)

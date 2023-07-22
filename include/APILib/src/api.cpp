@@ -2,7 +2,7 @@
  * \file api.cpp
  */
 
-#include <api.h>
+#include "../include/api.h"
 
 /**
  * Constructor for the "API" class.
@@ -26,7 +26,7 @@ API::~API()
 /**
  * Querys an API endpoint.
  */
-auto API::queryEndpoint(const Endpoint& endpoint)
+httplib::Result API::queryEndpoint(const Endpoint& endpoint)
 {
     if (endpoint.method == Request_Method::GET)        // GET resource.
     {                                                  //

@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <endpoint.h>
+#include "../include/endpoint.h"
 
 /**
  * Constructor for the "Endpoint" struct.

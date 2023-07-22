@@ -4,14 +4,16 @@
 
 #pragma once
 
-#include <endpoint.h>
-#include <httplib.h>
-#include <string>
+#include "endpoint.h"
+#include "../../HTTPLib/include/httplib.h"
 #include <vector>
 
+/**
+ * A broker's API.
+ */
 class API
 {
-    protected:
+    public:
 
     /**
      * Constructor for the "API" class.
@@ -27,7 +29,7 @@ class API
     /**
      * Gets the requested API resource.
      */
-    auto queryEndpoint(const Endpoint& endpoint);
+    httplib::Result queryEndpoint(const Endpoint& endpoint);
 
     private:
 

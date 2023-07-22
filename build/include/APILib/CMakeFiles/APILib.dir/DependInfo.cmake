@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/cupofteajay/github/my-repos/wyeth/src/main.cpp" "CMakeFiles/Wyeth.dir/src/main.cpp.o" "gcc" "CMakeFiles/Wyeth.dir/src/main.cpp.o.d"
+  "/Users/cupofteajay/github/my-repos/wyeth/include/APILib/src/api.cpp" "include/APILib/CMakeFiles/APILib.dir/src/api.cpp.o" "gcc" "include/APILib/CMakeFiles/APILib.dir/src/api.cpp.o.d"
+  "/Users/cupofteajay/github/my-repos/wyeth/include/APILib/src/endpoint.cpp" "include/APILib/CMakeFiles/APILib.dir/src/endpoint.cpp.o" "gcc" "include/APILib/CMakeFiles/APILib.dir/src/endpoint.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
