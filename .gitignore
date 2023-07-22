@@ -1,4 +1,3 @@
-build/Makefile
-build/Wyeth
+build/*
 .DS_Store
 .vscode
