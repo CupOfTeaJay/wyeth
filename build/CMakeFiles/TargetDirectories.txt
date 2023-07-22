@@ -1,9 +1,0 @@
-/Users/cupofteajay/github/my-repos/wyeth/build/CMakeFiles/Wyeth.dir
-/Users/cupofteajay/github/my-repos/wyeth/build/CMakeFiles/edit_cache.dir
-/Users/cupofteajay/github/my-repos/wyeth/build/CMakeFiles/rebuild_cache.dir
-/Users/cupofteajay/github/my-repos/wyeth/build/include/HTTPLib/CMakeFiles/HTTPLib.dir
-/Users/cupofteajay/github/my-repos/wyeth/build/include/HTTPLib/CMakeFiles/edit_cache.dir
-/Users/cupofteajay/github/my-repos/wyeth/build/include/HTTPLib/CMakeFiles/rebuild_cache.dir
-/Users/cupofteajay/github/my-repos/wyeth/build/include/APILib/CMakeFiles/APILib.dir
-/Users/cupofteajay/github/my-repos/wyeth/build/include/APILib/CMakeFiles/edit_cache.dir
-/Users/cupofteajay/github/my-repos/wyeth/build/include/APILib/CMakeFiles/rebuild_cache.dir
