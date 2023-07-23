@@ -9,11 +9,11 @@
 #include <vector>
 
 /**
- * A broker's API.
+ * The broker's API.
  */
 class API
 {
-    public:
+    protected:
 
     /**
      * Constructor for the "API" class.

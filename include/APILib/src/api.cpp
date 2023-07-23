@@ -26,6 +26,7 @@ API::~API()
 /**
  * Querys an API endpoint.
  */
+// REFACTOR THIS
 httplib::Result API::queryEndpoint(const Endpoint& endpoint)
 {
     if (endpoint.method == Request_Method::GET)        // GET resource.
