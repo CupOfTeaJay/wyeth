@@ -3,7 +3,6 @@
  */
 
 #pragma once
-
 #include "endpoint.h"
 #include "../../HTTPLib/include/httplib.h"
 #include <vector>
@@ -11,8 +10,7 @@
 /**
  * The broker's API.
  */
-class API
-{
+class API {
     protected:
 
     /**
@@ -24,7 +22,7 @@ class API
     /**
      * Destructor for the "API" class.
      */
-    virtual ~API();
+    ~API();
 
     /**
      * Gets the requested API resource.
@@ -37,11 +35,6 @@ class API
      * The API's uniform resource identifier (URI).
      */
     const std::string uri;
-
-    /**
-     * The API's HTTP(S) client.
-     */
-    httplib::Client client;
 
     /**
      * A vector containing the API's endpoints.

@@ -3,14 +3,12 @@
  */
 
 #pragma once
-
 #include <string>
 
 /**
  * An enumeration of HTTP(S) request methods.
  */
-enum class Request_Method
-{
+enum class Request_Method {
     GET   = 0,
     PATCH = 1,
     POST  = 2,
@@ -20,8 +18,7 @@ enum class Request_Method
 /**
  * An endpoint containing a resource that can be queried via a request method.
  */
-struct Endpoint
-{
+struct Endpoint {
     /**
      * Constructor for the "Endpoint" struct.
      */
