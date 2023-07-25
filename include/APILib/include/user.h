@@ -8,7 +8,8 @@
 /**
  * The user.
  */
-class User {
+class User
+{
     public:
 
     /**

@@ -18,7 +18,8 @@ enum class Request_Method {
 /**
  * An endpoint containing a resource that can be queried via a request method.
  */
-struct Endpoint {
+struct Endpoint
+{
     /**
      * Constructor for the "Endpoint" struct.
      */

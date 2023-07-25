@@ -4,9 +4,6 @@
 
 #include "../include/api.h"
 
-/**
- * Constructor for the "API" class.
- */
 API::API(const std::string uri,
          const std::vector<const Endpoint> endpoints)
          :
@@ -14,15 +11,9 @@ API::API(const std::string uri,
          endpoints(endpoints) {
 }
 
-/**
- * Destructor for the "API" class.
- */
 API::~API() {
 }
 
-/**
- * Sends an HTTPS request to one of the API's endpoints.
- */
 httplib::Result API::queryEndpoint(const Endpoint& endpoint) {
     if (endpoint.method == Request_Method::GET) {
         return this->client->Get(endpoint.uri);

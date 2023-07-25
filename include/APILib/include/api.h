@@ -10,7 +10,8 @@
 /**
  * The broker's API.
  */
-class API {
+class API
+{
     protected:
 
     /**
