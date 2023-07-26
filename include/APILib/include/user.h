@@ -4,7 +4,6 @@
 
 #pragma once
 #include "api.h"
-#include "../../HTTPLib/include/httplib.h"
 
 /**
  * The user.
@@ -17,14 +16,17 @@ class User
      * Constructor for the "User" class.
      */
     explicit User(const std::string& authToken,
-                  const API* _api);
+                  API* _api);
 
     /**
      * Destructor for the "User" class.
      */
     ~User();
 
-    httplib::Response queryApi(const Endpoint& endpoint);
+    /**
+     * TODO
+     */
+    httplib::Result queryApi(const Endpoint& endpoint);
 
     private:
 
@@ -36,10 +38,5 @@ class User
     /**
      * The user's API association
      */
-    const API* _api;
-
-    /**
-     * The user's HTTPS client association.
-     */
-    httplib::Client* _httpsClient;
+    API* _api;
 };

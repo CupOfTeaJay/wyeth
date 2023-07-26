@@ -4,6 +4,7 @@
 
 #pragma once
 #include "endpoint.h"
+#include "../../HTTPLib/include/httplib.h"
 #include <vector>
 
 /**
@@ -14,14 +15,9 @@ class API
     public:
 
     /**
-     * The API's uniform resource identifier (URI).
+     * TODO
      */
-    const std::string uri;
-
-    /**
-     * A vector containing the API's endpoints.
-     */
-    const std::vector<const Endpoint> endpoints;
+    httplib::Result queryEndpoint(const Endpoint& endpoint);
 
     protected:
 
@@ -35,4 +31,21 @@ class API
      * Destructor for the "API" class.
      */
     ~API();
+
+    private:
+
+    /**
+     * The API's uniform resource identifier (URI).
+     */
+    const std::string uri;
+
+    /**
+     * A vector containing the API's endpoints.
+     */
+    const std::vector<const Endpoint> endpoints;
+
+    /**
+     * The API's HTTPS client association.
+     */
+    httplib::Client* _httpsClient;
 };
