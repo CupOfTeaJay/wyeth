@@ -5,7 +5,7 @@
 namespace Wyeth
 {
     /**
-     * An enumeration of supported Broker APIs.
+     * An enumeration of Broker APIs currently supported by Wyeth.
      */
     enum class Broker_API {
         OANDA_REST_PRACTICE = 0
