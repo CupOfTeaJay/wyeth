@@ -9,9 +9,9 @@ namespace Wyeth
     API::API(const std::string& uri,
             const std::vector<const Endpoint>& endpoints)
             :
-            uri(uri),
-            endpoints(endpoints),
-            _httpsClient(new httplib::Client{this->uri}) {
+            uri{uri},
+            endpoints{endpoints},
+            _httpsClient{new httplib::Client{this->uri}} {
     }
 
     API::~API() {

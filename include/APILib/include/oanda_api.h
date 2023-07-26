@@ -10,7 +10,7 @@ namespace Wyeth
     /**
      * TODO
      */
-    class OANDA_API : public API
+    class OANDA_API : protected API
     {
         public:
 

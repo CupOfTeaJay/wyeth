@@ -17,6 +17,13 @@ namespace Wyeth
         public:
 
         /**
+         * TODO
+         */
+        httplib::Result queryEndpoint(const Endpoint& endpoint);
+
+        protected:
+
+        /**
          * Constructor for the "API" class.
          */
         explicit API(const std::string& uri,
@@ -26,11 +33,6 @@ namespace Wyeth
          * Destructor for the "API" class.
          */
         ~API();
-
-        /**
-         * TODO
-         */
-        httplib::Result queryEndpoint(const Endpoint& endpoint);
 
         private:
 
