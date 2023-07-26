@@ -18,7 +18,7 @@ namespace Wyeth
          * Constructor for the "User" class.
          */
         explicit User(const std::string& authToken,
-                    API* _api);
+                      API* _api);
 
         /**
          * Destructor for the "User" class.

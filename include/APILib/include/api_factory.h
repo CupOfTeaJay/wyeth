@@ -3,7 +3,7 @@
  */
 
 #pragma once
-#include "oanda_api.h"
+#include "oanda_rest_practice.h"
 
 namespace Wyeth
 {
@@ -27,7 +27,6 @@ namespace Wyeth
         /**
          * TODO
          */
-        API* const instantiateApi(const std::string& uri,
-                                  const std::vector<const Endpoint> endpoints);
+        API* const instantiateApi(const Broker_API& apiToInstantiate);
     };
 }

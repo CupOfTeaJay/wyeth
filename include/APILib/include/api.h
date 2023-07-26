@@ -32,7 +32,7 @@ namespace Wyeth
         /**
          * Destructor for the "API" class.
          */
-        ~API();
+        virtual ~API();
 
         private:
 
