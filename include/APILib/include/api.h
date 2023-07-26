@@ -24,8 +24,8 @@ class API
     /**
      * Constructor for the "API" class.
      */
-    explicit API(const std::string uri,
-                 const std::vector<const Endpoint> endpoints);
+    explicit API(const std::string& uri,
+                 const std::vector<const Endpoint>& endpoints);
 
     /**
      * Destructor for the "API" class.

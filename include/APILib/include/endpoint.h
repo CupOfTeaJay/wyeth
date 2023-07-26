@@ -23,16 +23,16 @@ struct Endpoint
     /**
      * Constructor for the "Endpoint" struct.
      */
-    Endpoint(const Request_Method method,
-             const std::string uri);
-
-    /**
-     * The endpoint's request method.
-     */
-    const Request_Method method;
+    Endpoint(const std::string& uri,
+             const Request_Method& method);
 
     /**
      * The endpoint's uniform resource identifier (URI).
      */
     const std::string uri;
+
+    /**
+     * The endpoint's request method.
+     */
+    const Request_Method method;
 };

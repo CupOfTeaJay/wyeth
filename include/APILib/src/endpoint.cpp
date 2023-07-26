@@ -4,9 +4,9 @@
 
 #include "../include/endpoint.h"
 
-Endpoint::Endpoint(const Request_Method method,
-                   const std::string uri)
+Endpoint::Endpoint(const std::string& uri,
+                   const Request_Method& method)
                    :
-                   method(method),
-                   uri(uri) {
+                   uri(uri),
+                   method(method) {
 }
