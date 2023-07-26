@@ -4,9 +4,12 @@
 
 #pragma once
 
-/**
- * TODO
- */
-class API_Factory
+namespace Wyeth
 {
-};
+    /**
+     * TODO
+     */
+    class API_Factory
+    {
+    };
+}

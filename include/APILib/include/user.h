@@ -5,38 +5,41 @@
 #pragma once
 #include "api.h"
 
-/**
- * The user.
- */
-class User
+namespace Wyeth
 {
-    public:
-
     /**
-     * Constructor for the "User" class.
+     * The user.
      */
-    explicit User(const std::string& authToken,
-                  API* _api);
+    class User
+    {
+        public:
 
-    /**
-     * Destructor for the "User" class.
-     */
-    ~User();
+        /**
+         * Constructor for the "User" class.
+         */
+        explicit User(const std::string& authToken,
+                    API* _api);
 
-    /**
-     * TODO
-     */
-    httplib::Result queryApi(const Endpoint& endpoint);
+        /**
+         * Destructor for the "User" class.
+         */
+        ~User();
 
-    private:
+        /**
+         * TODO
+         */
+        httplib::Result queryApi(const Endpoint& endpoint);
 
-    /**
-     * The user's authorization token.
-     */
-    const std::string authToken;
+        private:
 
-    /**
-     * The user's API association
-     */
-    API* _api;
-};
+        /**
+         * The user's authorization token.
+         */
+        const std::string authToken;
+
+        /**
+         * The user's API association
+         */
+        API* _api;
+    };
+}

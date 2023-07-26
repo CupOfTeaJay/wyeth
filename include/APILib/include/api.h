@@ -7,43 +7,46 @@
 #include "../../HTTPLib/include/httplib.h"
 #include <vector>
 
-/**
- * The broker's API.
- */
-class API
+namespace Wyeth
 {
-    public:
-
     /**
-     * Constructor for the "API" class.
+     * The broker's API.
      */
-    explicit API(const std::string& uri,
-                 const std::vector<const Endpoint>& endpoints);
+    class API
+    {
+        public:
 
-    /**
-     * Destructor for the "API" class.
-     */
-    ~API();
+        /**
+         * Constructor for the "API" class.
+         */
+        explicit API(const std::string& uri,
+                     const std::vector<const Endpoint>& endpoints);
 
-    /**
-     * TODO
-     */
-    httplib::Result queryEndpoint(const Endpoint& endpoint);
+        /**
+         * Destructor for the "API" class.
+         */
+        ~API();
 
-    private:
+        /**
+         * TODO
+         */
+        httplib::Result queryEndpoint(const Endpoint& endpoint);
 
-    /**
-     * The API's uniform resource identifier (URI).
-     */
-    const std::string uri;
+        private:
 
-    /**
-     * A vector containing the API's endpoints.
-     */
-    const std::vector<const Endpoint> endpoints;
+        /**
+         * The API's uniform resource identifier (URI).
+         */
+        const std::string uri;
 
-    /**
-     * The API's HTTPS client association.
-     */
-    httplib::Client* _httpsClient;
-};
+        /**
+         * A vector containing the API's endpoints.
+         */
+        const std::vector<const Endpoint> endpoints;
+
+        /**
+         * The API's HTTPS client association.
+         */
+        httplib::Client* _httpsClient;
+    };
+}

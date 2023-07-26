@@ -4,16 +4,19 @@
 
 #include "../include/user.h"
 
-User::User(const std::string& authToken,
-           API* _api)
-           :
-           authToken(authToken),
-           _api(_api) {
-}
+namespace Wyeth
+{
+    User::User(const std::string& authToken,
+            API* _api)
+            :
+            authToken(authToken),
+            _api(_api) {
+    }
 
-User::~User() {
-}
+    User::~User() {
+    }
 
-httplib::Result User::queryApi(const Endpoint& endpoint) {
-    return this->_api->queryEndpoint(endpoint);
+    httplib::Result User::queryApi(const Endpoint& endpoint) {
+        return this->_api->queryEndpoint(endpoint);
+    }
 }
