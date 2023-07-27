@@ -10,6 +10,8 @@
 
 #define CPPHTTPLIB_VERSION "0.13.1"
 
+#define CPPHTTPLIB_OPENSSL_SUPPORT
+
 /*
  * Configuration
  */

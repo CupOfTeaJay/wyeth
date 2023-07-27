@@ -13,11 +13,17 @@ namespace Wyeth
              endpoints{endpoints},
              _httpsClient{new httplib::Client{this->uri}}
     {
+        this->_httpsClient->set_default_headers({{"Content-Type", "application/json"}});
+        // this->_httpsClient->set_keep_alive(true);
     }
 
     API::~API()
     {
         delete this->_httpsClient;
+    }
+
+    void API::setAuthToken(const std::string& authToken) {
+        this->_httpsClient->set_bearer_token_auth(authToken);
     }
 
     httplib::Result API::queryEndpoint(const Endpoint& endpoint) {

@@ -17,6 +17,16 @@ namespace Wyeth
         public:
 
         /**
+         * Destructor for the "API" class.
+         */
+        virtual ~API();
+
+        /**
+         * Sets the API's authorization token.
+         */
+        void setAuthToken(const std::string& authToken);
+
+        /**
          * TODO
          */
         httplib::Result queryEndpoint(const Endpoint& endpoint);
@@ -28,11 +38,6 @@ namespace Wyeth
          */
         explicit API(const std::string& uri,
                      const std::vector<const Endpoint>& endpoints);
-
-        /**
-         * Destructor for the "API" class.
-         */
-        virtual ~API();
 
         private:
 
