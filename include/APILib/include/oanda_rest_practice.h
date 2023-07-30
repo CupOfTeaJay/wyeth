@@ -14,7 +14,7 @@ namespace Wyeth
      */
     class OANDA_REST_Practice : protected API
     {
-        // This class should only be instantiated via the API Factory.
+        // This object should only be instantiated via the API Factory.
         friend class API_Factory;
 
         protected:
