@@ -13,7 +13,7 @@ namespace Wyeth
              endpoints{endpoints},
              _httpsClient{new httplib::Client{this->uri}}
     {
-        // this->_httpsClient->set_keep_alive(true);
+        this->_httpsClient->set_keep_alive(true);
     }
 
     API::~API()
