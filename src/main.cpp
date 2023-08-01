@@ -7,6 +7,7 @@
 
 int main() {
     // Input OAuth token.
+    std::cout << "Please enter your authorization token..." << std::endl;
     std::string testAuthToken;
     std::cin >> testAuthToken;
 
