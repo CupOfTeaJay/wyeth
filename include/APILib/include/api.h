@@ -10,7 +10,7 @@
 namespace Wyeth
 {
     /**
-     * The broker's API.
+     * A broker's API.
      */
     class API
     {
@@ -22,12 +22,12 @@ namespace Wyeth
         virtual ~API();
 
         /**
-         * Sets the API's authorization token.
+         * Sets the authorization token for the API's HTTPS client association.
          */
         void setAuthToken(const std::string& authToken);
 
         /**
-         * TODO
+         * Queries one of the API's endpoints.
          */
         httplib::Result queryEndpoint(const Endpoint& endpoint);
 
@@ -47,13 +47,13 @@ namespace Wyeth
         const std::string uri;
 
         /**
-         * A vector containing the API's endpoints.
+         * The API's endpoints.
          */
         const std::vector<const Endpoint> endpoints;
 
         /**
          * The API's HTTPS client association.
          */
-        httplib::Client* _httpsClient;
+        httplib::Client* const _httpsClient;
     };
 }

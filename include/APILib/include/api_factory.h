@@ -8,7 +8,7 @@
 namespace Wyeth
 {
     /**
-     * TODO
+     * A factory class for instantiating API objects.
      */
     class API_Factory
     {
@@ -25,8 +25,8 @@ namespace Wyeth
         ~API_Factory();
 
         /**
-         * TODO
+         * Creates an instance of an API object.
          */
-        API* const instantiateApi(const Broker_API& apiToInstantiate);
+        API* const instantiateApi(const Broker_API& apiToInstantiate) const;
     };
 }

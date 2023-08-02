@@ -9,7 +9,7 @@
 namespace Wyeth
 {
     /**
-     * An endpoint containing a resource that can be queried via an HTTPS
+     * An endpoint containing a resource that can be queried via an HTTP(S)
      * request method.
      */
     struct Endpoint
@@ -26,7 +26,7 @@ namespace Wyeth
         const std::string uri;
 
         /**
-         * The endpoint's request method.
+         * The endpoint's HTTP(S) request method.
          */
         const HTTP_Method method;
     };

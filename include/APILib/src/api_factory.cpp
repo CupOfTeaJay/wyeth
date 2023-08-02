@@ -14,7 +14,7 @@ namespace Wyeth
     {
     }
 
-    API* const API_Factory::instantiateApi(const Broker_API& apiToInstantiate) {
+    API* const API_Factory::instantiateApi(const Broker_API& apiToInstantiate) const {
         if (apiToInstantiate == Broker_API::OANDA_REST_PRACTICE) {
             return new OANDA_REST_Practice{};
         }

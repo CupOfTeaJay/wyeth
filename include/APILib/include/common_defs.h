@@ -12,7 +12,7 @@ namespace Wyeth
     };
 
     /**
-     * An enumeration of HTTP(S) request methods.
+     * An enumeration of HTTPS request methods.
      */
     enum class HTTP_Method {
         GET   = 0,
