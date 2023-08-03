@@ -20,7 +20,7 @@ namespace Wyeth
          * Constructor for the "Endpoint" struct.
          */
         Endpoint(const std::string& uri,
-                 const HTTP_Method& method);
+                 const HTTP_Method& method) noexcept;
 
         /**
          * The endpoint's uniform resource identifier (URI).

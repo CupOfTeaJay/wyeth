@@ -8,7 +8,7 @@
 
 namespace Wyeth
 {
-    OANDA_REST_Practice::OANDA_REST_Practice()
+    OANDA_REST_Practice::OANDA_REST_Practice() noexcept
     :
     API{"https://api-fxpractice.oanda.com",
         {{"/v3/accounts", HTTP_Method::GET},

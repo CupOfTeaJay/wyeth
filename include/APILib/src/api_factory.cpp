@@ -8,7 +8,7 @@
 
 namespace Wyeth
 {
-    API_Factory::API_Factory()
+    API_Factory::API_Factory() noexcept
     {
     }
 
@@ -16,7 +16,7 @@ namespace Wyeth
     {
     }
 
-    API* const API_Factory::instantiateApi(const Broker_API& apiToInstantiate) const {
+    API* const API_Factory::instantiateApi(const Broker_API& apiToInstantiate) const noexcept {
         if (apiToInstantiate == Broker_API::OANDA_REST_PRACTICE) {
             return new OANDA_REST_Practice{};
         }

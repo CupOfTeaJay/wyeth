@@ -9,7 +9,7 @@
 namespace Wyeth
 {
     Endpoint::Endpoint(const std::string& uri,
-                       const HTTP_Method& method)
+                       const HTTP_Method& method) noexcept
                        :
                        uri{uri},
                        method{method}

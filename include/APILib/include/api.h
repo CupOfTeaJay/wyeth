@@ -26,12 +26,12 @@ namespace Wyeth
         /**
          * Sets the authorization token for the API's HTTPS client association.
          */
-        void setAuthToken(const std::string& authToken);
+        void setAuthToken(const std::string& authToken) noexcept;
 
         /**
          * Queries one of the API's endpoints.
          */
-        httplib::Result queryEndpoint(const Endpoint& endpoint);
+        httplib::Result queryEndpoint(const Endpoint& endpoint) noexcept;
 
         protected:
 
@@ -39,7 +39,7 @@ namespace Wyeth
          * Constructor for the "API" class.
          */
         explicit API(const std::string& uri,
-                     const std::vector<const Endpoint>& endpoints);
+                     const std::vector<const Endpoint>& endpoints) noexcept;
 
         private:
 

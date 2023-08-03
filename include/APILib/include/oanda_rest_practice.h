@@ -19,12 +19,19 @@ namespace Wyeth
         // This class should only be instantiated via an "API_Factory" object.
         friend class API_Factory;
 
+        public:
+
+        /**
+         * Gets an OANDA REST API endpoint.
+         */
+        const Endpoint getEndpoint() const noexcept;
+
         protected:
 
         /**
          * Constructor for the "OANDA_REST_Practice" class.
          */
-        explicit OANDA_REST_Practice();
+        explicit OANDA_REST_Practice() noexcept;
 
         /**
          * Destructor for the "OANDA_REST_Practice" class.

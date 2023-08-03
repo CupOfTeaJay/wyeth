@@ -19,7 +19,7 @@ namespace Wyeth
         /**
          * Constructor for the "API Factory" class.
          */
-        API_Factory();
+        API_Factory() noexcept;
 
         /**
          * Destructor for the "API Factory" class.
@@ -29,6 +29,6 @@ namespace Wyeth
         /**
          * Creates an instance of an API object.
          */
-        API* const instantiateApi(const Broker_API& apiToInstantiate) const;
+        API* const instantiateApi(const Broker_API& apiToInstantiate) const noexcept;
     };
 }

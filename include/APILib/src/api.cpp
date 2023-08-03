@@ -9,7 +9,7 @@
 namespace Wyeth
 {
     API::API(const std::string& uri,
-             const std::vector<const Endpoint>& endpoints)
+             const std::vector<const Endpoint>& endpoints) noexcept
              :
              uri{uri},
              endpoints{endpoints},
@@ -23,11 +23,11 @@ namespace Wyeth
         delete this->_httpsClient;
     }
 
-    void API::setAuthToken(const std::string& authToken) {
+    void API::setAuthToken(const std::string& authToken) noexcept {
         this->_httpsClient->set_bearer_token_auth(authToken);
     }
 
-    httplib::Result API::queryEndpoint(const Endpoint& endpoint) {
+    httplib::Result API::queryEndpoint(const Endpoint& endpoint) noexcept {
         if (endpoint.method == HTTP_Method::GET) {
             return this->_httpsClient->Get(endpoint.uri);
         }
