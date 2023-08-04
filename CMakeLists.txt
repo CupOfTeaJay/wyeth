@@ -6,14 +6,14 @@ endif()
 
 set (CMAKE_CXX_STANDARD 20)
 
-project(Wyeth
+project(wyeth
     VERSION 1.0
     DESCRIPTION "A very cool project"
     LANGUAGES CXX)
 
-add_executable(Wyeth src/main.cpp)
+add_executable(wyeth src/main.cpp)
 
 add_subdirectory(include/HTTPLib)
 add_subdirectory(include/APILib)
 
-target_link_libraries(Wyeth PUBLIC APILib)
+target_link_libraries(wyeth PUBLIC APILib)
