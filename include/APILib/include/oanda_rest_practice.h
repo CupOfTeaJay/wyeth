@@ -9,15 +9,11 @@
 
 namespace Wyeth
 {
-    class API_Factory;
-
     /**
      * An OANDA REST API for the fxTrade Practice environment.
      */
-    class OANDA_REST_Practice : protected API
+    class OANDA_REST_Practice : public API
     {
-        // This class should only be instantiated via an "API_Factory" object.
-        friend class API_Factory;
 
         public:
 

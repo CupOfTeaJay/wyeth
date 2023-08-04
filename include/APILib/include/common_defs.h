@@ -7,13 +7,6 @@
 namespace Wyeth
 {
     /**
-     * An enumeration of Broker APIs currently supported by Wyeth.
-     */
-    enum class Broker_API {
-        OANDA_REST_PRACTICE = 0
-    };
-
-    /**
      * An enumeration of HTTPS request methods.
      */
     enum class HTTP_Method {
