@@ -26,19 +26,4 @@ namespace Wyeth
     void API::setAuthToken(const std::string& authToken) noexcept {
         this->_httpsClient->set_bearer_token_auth(authToken);
     }
-
-    httplib::Result API::queryEndpoint(const Endpoint& endpoint) noexcept {
-        if (endpoint.method == HTTP_Method::GET) {
-            return this->_httpsClient->Get(endpoint.uri);
-        }
-        else if (endpoint.method == HTTP_Method::PATCH) {
-            return this->_httpsClient->Patch(endpoint.uri);
-        }
-        else if (endpoint.method == HTTP_Method::POST) {
-            return this->_httpsClient->Post(endpoint.uri);
-        }
-        else {
-            return this->_httpsClient->Put(endpoint.uri);
-        }
-    }
 }

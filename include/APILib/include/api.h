@@ -31,7 +31,7 @@ namespace Wyeth
         /**
          * Queries one of the API's endpoints.
          */
-        httplib::Result queryEndpoint(const Endpoint& endpoint) noexcept;
+        virtual httplib::Result queryEndpoint(const std::string) noexcept = 0;
 
         protected:
 
@@ -40,8 +40,6 @@ namespace Wyeth
          */
         explicit API(const std::string& uri,
                      const std::vector<const Endpoint>& endpoints) noexcept;
-
-        private:
 
         /**
          * The API's uniform resource identifier (URI).
