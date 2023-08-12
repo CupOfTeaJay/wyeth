@@ -19,13 +19,22 @@ namespace Wyeth
          {"/v3/accounts/{ACCOUNT_ID}/changes", HTTP_Method::GET},
          {"/v3/instruments/{INSTRUMENT}/candles", HTTP_Method::GET},
          {"/v3/instruments/{INSTRUMENT}/orderBook", HTTP_Method::GET},
-         {"/v3/instruments/{INSTRUMENT}/positionBook", HTTP_Method::GET}}}
+         {"/v3/instruments/{INSTRUMENT}/positionBook", HTTP_Method::GET},
+         {"/v3/accounts/{ACCOUNT_ID}/orders", HTTP_Method::POST},
+         {"/v3/accounts/{ACCOUNT_ID}/orders", HTTP_Method::GET},
+         {"/v3/accounts/{ACCOUNT_ID}/pendingOrders", HTTP_Method::GET},
+         {"/v3/accounts/{ACCOUNT_ID}/orders/{ORDER_SPECIFIER}", HTTP_Method::GET},
+         {"/v3/accounts/{ACCOUNT_ID}/orders/{ORDER_SPECIFIER}", HTTP_Method::PUT},
+         {"/v3/accounts/{ACCOUNT_ID}/orders/{ORDER_SPECIFIER}/cancel", HTTP_Method::PUT},
+         {"/v3/accounts/{ACCOUNT_ID}/orders/{ORDER_SPECIFIER}/clientExtensions", HTTP_Method::PUT}}}
     {
     }
 
     OANDA_REST_Practice::~OANDA_REST_Practice()
     {
     }
+
+    // ACCOUNT ENDPOINTS -------------------------------------------------------
 
     httplib::Result OANDA_REST_Practice::getAccountList() noexcept {
         return this->queryEndpoint("/v3/accounts");
@@ -50,4 +59,20 @@ namespace Wyeth
     httplib::Result OANDA_REST_Practice::getAccountChanges() noexcept {
         return this->queryEndpoint("/v3/accounts/{ACCOUNT_ID}/changes");
     }
+
+    // INSTRUMENT ENDPOINTS ----------------------------------------------------
+
+    httplib::Result OANDA_REST_Practice::getInstrumentCandles() noexcept {
+        return this->queryEndpoint("/v3/instruments/{INSTRUMENT}/candles");
+    }
+
+    httplib::Result OANDA_REST_Practice::getInstrumentOrderBook() noexcept {
+        return this->queryEndpoint("/v3/instruments/{INSTRUMENT}/orderBook");
+    }
+
+    httplib::Result OANDA_REST_Practice::getInstrumentPositionBook() noexcept {
+        return this->queryEndpoint("/v3/instruments/{INSTRUMENT}/positionBook");
+    }
+
+    // ORDER ENDPOINTS ---------------------------------------------------------
 }

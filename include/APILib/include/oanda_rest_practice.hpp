@@ -24,7 +24,7 @@ namespace Wyeth
         /**
          * Destructor for the "OANDA_REST_Practice" class.
          */
-        ~OANDA_REST_Practice();
+        virtual ~OANDA_REST_Practice() override final;
 
         /**
          * TODO:
@@ -32,7 +32,7 @@ namespace Wyeth
         httplib::Result getAccountList() noexcept;
 
         /**
-         * TODO:         *
+         * TODO:
          */
         httplib::Result getAccountDetails() noexcept;
 
@@ -55,5 +55,20 @@ namespace Wyeth
          * TODO:
          */
         httplib::Result getAccountChanges() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getInstrumentCandles() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getInstrumentOrderBook() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getInstrumentPositionBook() noexcept;
     };
 }

@@ -7,6 +7,7 @@
 #pragma once
 #include "endpoint_map.hpp"
 #include "../../HTTPLib/include/httplib.h"
+#include <vector>
 
 namespace Wyeth
 {
@@ -38,12 +39,12 @@ namespace Wyeth
          * Constructor for the "API" class.
          */
         explicit API(const std::string& uri,
-                     const Endpoint_Map& endpoints) noexcept;
+                     const std::vector<const Endpoint>& endpoints) noexcept;
 
         /**
          * Queries one of the API's endpoints.
          */
-        httplib::Result queryEndpoint(const std::string& uri) noexcept;
+        httplib::Result queryEndpoint(const int& uri) noexcept;
 
         private:
 
@@ -55,7 +56,7 @@ namespace Wyeth
         /**
          * The API's endpoints.
          */
-        const Endpoint_Map endpoints;
+        const std::vector<const Endpoint> endpoints;
 
         /**
          * The API's HTTPS client association.

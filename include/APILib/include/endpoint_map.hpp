@@ -7,13 +7,22 @@
 #pragma once
 #include "common.hpp"
 #include <string>
-#include <unordered_map>
 
 namespace Wyeth
 {
     /**
-     * An unordered endpoint map. Containins a resource (key) that can be
-     * queried via an HTTP(S) request method (value).
+     * TODO:
      */
-    typedef std::unordered_map<std::string, HTTP_Method> Endpoint_Map;
+    struct Endpoint
+    {
+        /**
+         * TODO:
+         */
+        std::string uri;
+
+        /**
+         * TODO:
+         */
+        HTTP_Method method;
+    };
 }
