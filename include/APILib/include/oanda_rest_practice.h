@@ -14,15 +14,7 @@ namespace Wyeth
      */
     class OANDA_REST_Practice : public API
     {
-
         public:
-
-        /**
-         * Gets an OANDA REST API endpoint.
-         */
-        const Endpoint getEndpoint() const noexcept;
-
-        protected:
 
         /**
          * Constructor for the "OANDA_REST_Practice" class.
