@@ -41,6 +41,13 @@ namespace Wyeth
                      const Endpoint_Map& endpoints) noexcept;
 
         /**
+         * Queries one of the API's endpoints.
+         */
+        httplib::Result queryEndpoint(const std::string& uri) noexcept;
+
+        private:
+
+        /**
          * The API's uniform resource identifier (URI).
          */
         const std::string uri;

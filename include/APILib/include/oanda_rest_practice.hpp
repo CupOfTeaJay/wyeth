@@ -25,5 +25,35 @@ namespace Wyeth
          * Destructor for the "OANDA_REST_Practice" class.
          */
         ~OANDA_REST_Practice();
+
+        /**
+         * TODO:
+         */
+        httplib::Result getAccountList() noexcept;
+
+        /**
+         * TODO:         *
+         */
+        httplib::Result getAccountDetails() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getAccountSummary() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getAccountInstruments() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result patchAccountConfiguration() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getAccountChanges() noexcept;
     };
 }
