@@ -1,11 +1,11 @@
 /**
- * \file oanda_rest_practice.h
+ * \file oanda_rest_practice.hpp
  *
  * TODO
  */
 
 #pragma once
-#include "api.h"
+#include "api.hpp"
 
 namespace Wyeth
 {

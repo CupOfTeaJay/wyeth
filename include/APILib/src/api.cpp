@@ -4,7 +4,7 @@
  * TODO
  */
 
-#include "../include/api.h"
+#include "../include/api.hpp"
 
 namespace Wyeth
 {

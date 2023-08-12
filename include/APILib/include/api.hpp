@@ -1,11 +1,11 @@
 /**
- * \file api.h
+ * \file api.hpp
  *
  * TODO
  */
 
 #pragma once
-#include "endpoint_map.h"
+#include "endpoint_map.hpp"
 #include "../../HTTPLib/include/httplib.h"
 
 namespace Wyeth

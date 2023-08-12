@@ -1,11 +1,11 @@
 /**
- * \file endpoints_map.h
+ * \file endpoints_map.hpp
  *
  * TODO
  */
 
 #pragma once
-#include "common.h"
+#include "common.hpp"
 #include <string>
 #include <unordered_map>
 

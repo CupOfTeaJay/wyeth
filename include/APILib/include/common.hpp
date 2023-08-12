@@ -1,5 +1,5 @@
 /**
- * \file common.h
+ * \file common.hpp
  *
  * TODO
  */

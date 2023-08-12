@@ -4,7 +4,7 @@
  * TODO
  */
 
-#include "../include/oanda_rest_practice.h"
+#include "../include/oanda_rest_practice.hpp"
 
 namespace Wyeth
 {
