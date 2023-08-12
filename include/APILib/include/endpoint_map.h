@@ -5,7 +5,7 @@
  */
 
 #pragma once
-#include "common_defs.h"
+#include "common.h"
 #include <string>
 #include <unordered_map>
 
