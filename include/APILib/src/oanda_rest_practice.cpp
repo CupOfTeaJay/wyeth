@@ -1,7 +1,7 @@
 /**
  * \file oanda_rest_practice.cpp
  *
- * TODO
+ * TODO:
  */
 
 #include "../include/oanda_rest_practice.hpp"

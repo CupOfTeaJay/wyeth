@@ -1,9 +1,9 @@
 add_library(
     APILib SHARED
-    ./include/api.h
-    ./include/common.h
-    ./include/endpoint_map.h
-    ./include/oanda_rest_practice.h
+    ./include/api.hpp
+    ./include/common.hpp
+    ./include/endpoint_map.hpp
+    ./include/oanda_rest_practice.hpp
     ./src/api.cpp
     ./src/oanda_rest_practice.cpp
     )

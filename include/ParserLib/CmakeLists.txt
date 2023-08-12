@@ -1,0 +1,6 @@
+add_library(
+    ParserLib SHARED
+    ./include/application_json_parser.hpp
+    )
+
+target_link_libraries(APILib PUBLIC HTTPLib)
