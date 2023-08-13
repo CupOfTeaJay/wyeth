@@ -1,5 +1,5 @@
 /**
- * \file endpoints_map.hpp
+ * \file endpoint.hpp
  *
  * TODO:
  */

@@ -5,7 +5,7 @@
  */
 
 #pragma once
-#include "endpoint_map.hpp"
+#include "endpoint.hpp"
 #include "../../HTTPLib/include/httplib.h"
 #include <vector>
 
@@ -27,11 +27,6 @@ namespace Wyeth
          * Sets the authorization token for the API's HTTPS client association.
          */
         void setAuthToken(const std::string& authToken) noexcept;
-
-        /**
-         * Queries one of the API's endpoints.
-         */
-        httplib::Result queryEndpoint(const std::string& uri) noexcept;
 
         protected:
 
