@@ -58,7 +58,7 @@ namespace Wyeth
         return this->queryEndpoint(OANDA_REST_Practice_Endpoint::ACCOUNT_INSTRUMENTS);
     }
 
-    httplib::Result OANDA_REST_Practice:: patchAccountConfiguration() noexcept {
+    httplib::Result OANDA_REST_Practice::patchAccountConfiguration() noexcept {
         return this->queryEndpoint(OANDA_REST_Practice_Endpoint::ACCOUNT_CONFIGURATION);
     }
 
