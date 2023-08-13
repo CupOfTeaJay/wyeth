@@ -16,6 +16,16 @@ namespace Wyeth
     struct Endpoint
     {
         /**
+         * Constructor for the "Endpoint" struct.
+         */
+        explicit Endpoint(const std::string& uri, const HTTP_Method& method) noexcept;
+
+        /**
+         * Destructor for the "Endpoint" struct.
+         */
+        ~Endpoint();
+
+        /**
          * TODO:
          */
         std::string uri;
