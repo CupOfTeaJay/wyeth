@@ -32,7 +32,20 @@ namespace Wyeth
          {"/v3/accounts/{ACCNT_ID}/trades/{TRD_SPEC}",                   HTTP_Method::GET},
          {"/v3/accounts/{ACCNT_ID}/trades/{TRD_SPEC}/close",             HTTP_Method::PUT},
          {"/v3/accounts/{ACCNT_ID}/trades/{TRD_SPEC}/clientExtensions",  HTTP_Method::PUT},
-         {"/v3/accounts/{ACCNT_ID}/trades/{TRD_SPEC}/orders",            HTTP_Method::PUT}}}
+         {"/v3/accounts/{ACCNT_ID}/trades/{TRD_SPEC}/orders",            HTTP_Method::PUT},
+         {"/v3/accounts/{ACCNT_ID}/positions",                           HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/openPositions",                       HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/positions/{INST}",                    HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/positions/{INST}/close",              HTTP_Method::PUT},
+         {"/v3/accounts/{ACCNT_ID}/transactions",                        HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/transactions/{TXN_ID}",               HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/transactions/idrange",                HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/transactions/sinceid",                HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/transactions/stream",                 HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/candles/latest",                      HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/pricing",                             HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/pricing/stream",                      HTTP_Method::GET},
+         {"/v3/accounts/{ACCNT_ID}/instruments/{INST}/candles",          HTTP_Method::GET}}}
     {
     }
 
@@ -134,5 +147,63 @@ namespace Wyeth
 
     httplib::Result OANDA_REST_Practice::putTradeOrders() noexcept {
         return this->queryEndpoint(OANDA_REST_Practice_Endpoint::TRADE_ORDERS);
+    }
+
+    // POSITION ENDPOINTS ------------------------------------------------------
+
+    httplib::Result OANDA_REST_Practice::getPositionList() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::POSITION_LIST);
+    }
+
+    httplib::Result OANDA_REST_Practice::getOpenPositionList() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::POSITION_OPEN_LIST);
+    }
+
+    httplib::Result OANDA_REST_Practice::getPositionDetails() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::POSITION_DETAILS);
+    }
+
+    httplib::Result OANDA_REST_Practice::putPositionClose() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::POSITION_CLOSE);
+    }
+
+    // TRANSACTION ENDPOINTS ---------------------------------------------------
+
+    httplib::Result OANDA_REST_Practice::getTransactionList() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::TRANSACTION_LIST);
+    }
+
+    httplib::Result OANDA_REST_Practice::getTransactionDetails() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::TRANSACTION_DETAILS);
+    }
+
+    httplib::Result OANDA_REST_Practice::getTransactionIdRange() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::TRANSACTION_ID_RANGE);
+    }
+
+    httplib::Result OANDA_REST_Practice::getTransactionSinceId() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::TRANSACTION_SINCE_ID);
+    }
+
+    httplib::Result OANDA_REST_Practice::getTransactionStream() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::TRANSACTION_STREAM);
+    }
+
+    // PRICING ENDPOINTS -------------------------------------------------------
+
+    httplib::Result OANDA_REST_Practice::getPricingCandlesLatest() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::PRICING_CANDLES_LATEST);
+    }
+
+    httplib::Result OANDA_REST_Practice::getPricingDetails() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::PRICING_DETAILS);
+    }
+
+    httplib::Result OANDA_REST_Practice::getPricingStream() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::PRICING_STREAM);
+    }
+
+    httplib::Result OANDA_REST_Practice::getPricingCandles() noexcept {
+        return this->queryEndpoint(OANDA_REST_Practice_Endpoint::PRICING_CANDLES);
     }
 }

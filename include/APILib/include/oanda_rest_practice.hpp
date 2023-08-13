@@ -36,6 +36,19 @@ namespace Wyeth
         TRADE_CLOSE              = 19,
         TRADE_CLIENT_EXTENSIONS  = 20,
         TRADE_ORDERS             = 21,
+        POSITION_LIST            = 22,
+        POSITION_OPEN_LIST       = 23,
+        POSITION_DETAILS         = 24,
+        POSITION_CLOSE           = 25,
+        TRANSACTION_LIST         = 26,
+        TRANSACTION_DETAILS      = 27,
+        TRANSACTION_ID_RANGE     = 28,
+        TRANSACTION_SINCE_ID     = 29,
+        TRANSACTION_STREAM       = 30,
+        PRICING_CANDLES_LATEST   = 31,
+        PRICING_DETAILS          = 32,
+        PRICING_STREAM           = 33,
+        PRICING_CANDLES          = 34,
     };
 
     /**
@@ -175,8 +188,73 @@ namespace Wyeth
 
         // POSITION ENDPOINTS --------------------------------------------------
 
+        /**
+         * TODO:
+         */
+        httplib::Result getPositionList() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getOpenPositionList() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getPositionDetails() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result putPositionClose() noexcept;
+
         // TRANSACTION ENDPOINTS -----------------------------------------------
 
+        /**
+         * TODO:
+         */
+        httplib::Result getTransactionList() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getTransactionDetails() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getTransactionIdRange() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getTransactionSinceId() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getTransactionStream() noexcept;
+
         // PRICING ENDPOINTS ---------------------------------------------------
+
+        /**
+         * TODO:
+         */
+        httplib::Result getPricingCandlesLatest() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getPricingDetails() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getPricingStream() noexcept;
+
+        /**
+         * TODO:
+         */
+        httplib::Result getPricingCandles() noexcept;
     };
 }
