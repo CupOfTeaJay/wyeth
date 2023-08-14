@@ -11,7 +11,7 @@ namespace Wyeth
     OANDA_REST_API::OANDA_REST_API(const std::string& uri) noexcept
     :
     API{uri,
-        {OANDA_ACCOUNT_LIST}
+        {Broker_Endpoint::OANDA_ACCOUNT_LIST, {"/v3/accounts", HTTP_Method::GET}}
         }
     {
     }
