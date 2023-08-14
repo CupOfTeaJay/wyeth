@@ -19,7 +19,7 @@ namespace Wyeth
         /**
          * Constructor for the "OANDA_REST_API" class.
          */
-        explicit OANDA_REST_API() noexcept;
+        explicit OANDA_REST_API(const std::string& uri) noexcept;
 
         /**
          * Destructor for the "OANDA_REST_API" class.

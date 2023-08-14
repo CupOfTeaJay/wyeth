@@ -34,12 +34,12 @@ namespace Wyeth
          * Constructor for the "API" class.
          */
         explicit API(const std::string& uri,
-                     const std::vector<const Endpoint>& endpoints) noexcept;
+                     const Endpoint_Map& endpoints) noexcept;
 
         /**
          * Queries one of the API's endpoints.
          */
-        httplib::Result queryEndpoint(const int& uri) noexcept;
+        httplib::Result queryEndpoint(const Broker_Endpoint& key) noexcept;
 
         private:
 
@@ -51,7 +51,7 @@ namespace Wyeth
         /**
          * The API's endpoints.
          */
-        const std::vector<const Endpoint> endpoints;
+        const Endpoint_Map endpoints;
 
         /**
          * The API's HTTPS client association.

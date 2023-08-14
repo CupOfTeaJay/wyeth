@@ -9,7 +9,7 @@
 namespace Wyeth
 {
     API::API(const std::string& uri,
-             const std::vector<const Endpoint>& endpoints) noexcept
+             const Endpoint_Map& endpoints) noexcept
              :
              uri{uri},
              endpoints{endpoints},
@@ -27,18 +27,18 @@ namespace Wyeth
         this->_httpsClient->set_bearer_token_auth(authToken);
     }
 
-    httplib::Result API::queryEndpoint(const int& index) noexcept {
-        if (this->endpoints[index].method == HTTP_Method::GET) {
-            return this->_httpsClient->Get(this->endpoints[index].uri);
+    httplib::Result API::queryEndpoint(const Broker_Endpoint& key) noexcept {
+        if (this->endpoints.at(key).method == HTTP_Method::GET) {
+            return this->_httpsClient->Get(this->endpoints.at(key).uri);
         }
-        else if (this->endpoints[index].method == HTTP_Method::PATCH) {
-            return this->_httpsClient->Patch(this->endpoints[index].uri);
+        else if (this->endpoints.at(key).method == HTTP_Method::PATCH) {
+            return this->_httpsClient->Patch(this->endpoints.at(key).uri);
         }
-        else if (this->endpoints[index].method == HTTP_Method::POST) {
-            return this->_httpsClient->Post(this->endpoints[index].uri);
+        else if (this->endpoints.at(key).method == HTTP_Method::POST) {
+            return this->_httpsClient->Post(this->endpoints.at(key).uri);
         }
         else {
-            return this->_httpsClient->Put(this->endpoints[index].uri);
+            return this->_httpsClient->Put(this->endpoints.at(key).uri);
         }
     }
 }

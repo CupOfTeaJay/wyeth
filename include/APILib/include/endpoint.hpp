@@ -7,6 +7,7 @@
 #pragma once
 #include "common.hpp"
 #include <string>
+#include <unordered_map>
 
 namespace Wyeth
 {
@@ -35,4 +36,9 @@ namespace Wyeth
          */
         HTTP_Method method;
     };
+
+    /**
+     * TODO:
+     */
+    typedef std::unordered_map<const Broker_Endpoint, const Endpoint> Endpoint_Map;
 }
