@@ -40,5 +40,5 @@ namespace Wyeth
     /**
      * TODO:
      */
-    typedef std::unordered_map<const Broker_Endpoint, const Endpoint> Endpoint_Map;
+    typedef std::unordered_map<std::string, Endpoint> Endpoint_Map;
 }
