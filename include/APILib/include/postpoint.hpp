@@ -6,7 +6,6 @@
 
 #pragma once
 #include "endpoint.hpp"
-#include <string>
 
 namespace httplib
 {

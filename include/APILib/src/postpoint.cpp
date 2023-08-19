@@ -6,7 +6,6 @@
 
 #pragma once
 #include "../include/postpoint.hpp"
-#include "../../HTTPLib/include/httplib.h"
 
 namespace Wyeth
 {

@@ -6,45 +6,35 @@
 
 #pragma once
 #include "endpoint.hpp"
-#include "../../HTTPLib/include/httplib.h"
-#include <vector>
+#include "endpoint_map.hpp"
+
+namespace httplib
+{
+    class Client;
+}
 
 namespace Wyeth
 {
-    /**
-     * A broker's API.
-     */
     class API
     {
-        public:
-
-        /**
-         * Destructor for the "API" class.
-         */
-        virtual ~API();
-
-        /**
-         * Sets the authorization token for the API's HTTPS client association.
-         */
-        void setAuthToken(const std::string& authToken) noexcept;
-
-        /**
-         * Gets the API's HTTPS client association.
-         */
-        httplib::Client* const getHttpsClient() const noexcept;
-
         protected:
 
         /**
          * Constructor for the "API" class.
          */
-        explicit API(const std::string& uri,
-                     const Endpoint_Map& endpoints) noexcept;
+        API(const std::string& authToken,
+            const std::string& uri,
+            const EndpointMap& endpoints) noexcept;
+
+        /**
+         * Destructor for the "API" class.
+         */
+        ~API();
 
         /**
          * Queries one of the API's endpoints.
          */
-        httplib::Result queryEndpoint(const Broker_Endpoint& key) noexcept;
+        httplib::Result queryEndpoint(const std::string& key) const noexcept;
 
         private:
 
@@ -56,11 +46,11 @@ namespace Wyeth
         /**
          * The API's endpoints.
          */
-        const Endpoint_Map endpoints;
+        const EndpointMap endpoints;
 
         /**
-         * The API's HTTPS client association.
-         */
+         * The API's HTTPS client.
+         */ 
         httplib::Client* const _httpsClient;
     };
 }

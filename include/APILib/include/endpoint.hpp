@@ -5,6 +5,8 @@
  */
 
 #pragma once
+#include "../../HTTPLib/include/httplib.h"
+#include <string>
 
 namespace httplib
 {
@@ -30,7 +32,7 @@ namespace Wyeth
         /**
          * Constructor for the "Endpoint" class.
          */
-        Endpoint() = default;
+        Endpoint() noexcept = default;
 
         /**
          * Destructor for the "Endpoint" struct.
