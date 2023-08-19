@@ -15,42 +15,20 @@ namespace httplib
 
 namespace Wyeth
 {
-    class API
+    class Api
     {
         protected:
 
-        /**
-         * Constructor for the "API" class.
-         */
-        API(const std::string& authToken,
-            const std::string& uri,
-            const EndpointMap& endpoints) noexcept;
+        Api() noexcept = default;
 
         /**
          * Destructor for the "API" class.
          */
-        ~API();
+        virtual ~Api() = default;
 
         /**
          * Queries one of the API's endpoints.
          */
         httplib::Result queryEndpoint(const std::string& key) const noexcept;
-
-        private:
-
-        /**
-         * The API's uniform resource identifier (URI).
-         */
-        const std::string uri;
-
-        /**
-         * The API's endpoints.
-         */
-        const EndpointMap endpoints;
-
-        /**
-         * The API's HTTPS client.
-         */ 
-        httplib::Client* const _httpsClient;
     };
 }
