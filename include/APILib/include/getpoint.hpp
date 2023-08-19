@@ -1,5 +1,5 @@
 /**
- * \file endpoint.hpp
+ * \file getpoint.hpp
  *
  * TODO:
  */
@@ -9,6 +9,8 @@
 
 namespace Wyeth
 {
+    class API;
+
     /**
      * TODO:
      */
@@ -19,23 +21,18 @@ namespace Wyeth
         /**
          * Constructor for the "Endpoint" class.
          */
-        Getpoint(const std::string& uri) noexcept;
-
-        /**
-         * Queries the endpoint.
-         */
-        virtual const httplib::Result query() noexcept override final;
-
-        private:
+        Getpoint(const std::string& uri,
+                 API* const api) noexcept;
 
         /**
          * Destructor for the "Endpoint" struct.
          */
         virtual ~Getpoint() override final;
-    };
 
-    /**
-     * TODO:
-     */
-    typedef std::unordered_map<std::string, Endpoint> Endpoint_Map;
+        /**
+         * Queries the getpoint.
+         */
+        virtual const httplib::Result query() noexcept override final;
+
+    };
 }

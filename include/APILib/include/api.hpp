@@ -28,6 +28,11 @@ namespace Wyeth
          */
         void setAuthToken(const std::string& authToken) noexcept;
 
+        /**
+         * Gets the API's HTTPS client association.
+         */
+        httplib::Client* const getHttpsClient() const noexcept;
+
         protected:
 
         /**
