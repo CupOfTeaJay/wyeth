@@ -5,13 +5,14 @@
  */
 
 #pragma once
-#include "../../HTTPLib/include/httplib.h"
-#include <string>
+
+namespace httplib
+{
+    class Result;
+}
 
 namespace Wyeth
 {
-    class API;
-
     /**
      * TODO:
      */
@@ -29,34 +30,11 @@ namespace Wyeth
         /**
          * Constructor for the "Endpoint" class.
          */
-        Endpoint(const std::string& uri,
-                 API* const _api) noexcept;
+        Endpoint() = default;
 
         /**
          * Destructor for the "Endpoint" struct.
          */
-        virtual ~Endpoint();
-
-        /**
-         * Gets the URI of this endpoint.
-         */
-        std::string getUri() const noexcept;
-
-        /**
-         * Gets the API that this endpoint belongs to.
-         */
-        API* const getApi() const noexcept;
-
-        private:
-
-        /**
-         * TODO:
-         */
-        std::string uri;
-
-        /**
-         * The API that this endpoint is associated with.
-         */
-        API* const _api;
+        virtual ~Endpoint() = default;
     };
 }

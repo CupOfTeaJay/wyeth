@@ -5,24 +5,21 @@
  */
 
 #pragma once
-#include "../include/api.hpp"
 #include "../include/patchpoint.hpp"
+#include "../../HTTPLib/include/httplib.h"
 
 namespace Wyeth
 {
     Patchpoint::Patchpoint(const std::string& uri,
-                           API* const _api) noexcept
+                           httplib::Client* const _httpsClient) noexcept
                            :
-                           Endpoint{uri, _api}
-    {
-    }
-
-    Patchpoint::~Patchpoint()
+                           uri(uri),
+                           _httpsClient(_httpsClient)
     {
     }
 
     const httplib::Result Patchpoint::query() noexcept
     {
-        return this->getApi()->getHttpsClient()->Patch(this->getUri());
+        return this->_httpsClient->Patch(this->uri);
     }
 }

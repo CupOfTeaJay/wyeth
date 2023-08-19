@@ -6,11 +6,15 @@
 
 #pragma once
 #include "endpoint.hpp"
+#include <string>
+
+namespace httplib
+{
+    class Client;
+}
 
 namespace Wyeth
 {
-    class API;
-
     /**
      * TODO:
      */
@@ -19,19 +23,31 @@ namespace Wyeth
         public:
 
         /**
-         * Constructor for the "Endpoint" class.
+         * Constructor for the "Patchpoint" class.
          */
         Getpoint(const std::string& uri,
-                 API* const api) noexcept;
+                 httplib::Client* const _httpsClient) noexcept;
 
         /**
-         * Destructor for the "Endpoint" struct.
+         * Destructor for the "Patchpoint" class.
          */
-        virtual ~Getpoint() override final;
+        virtual ~Getpoint() override final = default;
 
         /**
          * Queries the getpoint.
          */
         virtual const httplib::Result query() noexcept override final;
+
+        private:
+
+        /**
+         * The getpoint's uniform resource identifier (URI).
+         */
+        const std::string uri;
+
+        /**
+         * The getpoint's HTTPS client association.
+         */
+        httplib::Client* const _httpsClient;
     };
 }

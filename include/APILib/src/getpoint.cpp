@@ -5,24 +5,21 @@
  */
 
 #pragma once
-#include "../include/api.hpp"
 #include "../include/getpoint.hpp"
+#include "../../HTTPLib/include/httplib.h"
 
 namespace Wyeth
 {
     Getpoint::Getpoint(const std::string& uri,
-                       API* const _api) noexcept
+                       httplib::Client* const _httpsClient) noexcept
                        :
-                       Endpoint{uri, _api}
-    {
-    }
-
-    Getpoint::~Getpoint()
+                       uri(uri),
+                       _httpsClient(_httpsClient)
     {
     }
 
     const httplib::Result Getpoint::query() noexcept
     {
-        return this->getApi()->getHttpsClient()->Get(this->getUri());
+        return this->_httpsClient->Get(this->uri);
     }
 }
