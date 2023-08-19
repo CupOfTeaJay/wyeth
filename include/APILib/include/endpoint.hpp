@@ -5,7 +5,7 @@
  */
 
 #pragma once
-#include "common.hpp"
+#include "../../HTTPLib/include/httplib.h"
 #include <string>
 #include <unordered_map>
 
@@ -14,27 +14,33 @@ namespace Wyeth
     /**
      * TODO:
      */
-    struct Endpoint
+    class Endpoint
     {
+        public:
+
         /**
-         * Constructor for the "Endpoint" struct.
+         * Queries the endpoint.
          */
-        Endpoint(const std::string& uri, const HTTP_Method& method) noexcept;
+        virtual const httplib::Result query() noexcept = 0;
+
+        protected:
+
+        /**
+         * Constructor for the "Endpoint" class.
+         */
+        Endpoint(const std::string& uri) noexcept;
+
+        private:
 
         /**
          * Destructor for the "Endpoint" struct.
          */
-        ~Endpoint();
+        virtual ~Endpoint();
 
         /**
          * TODO:
          */
         std::string uri;
-
-        /**
-         * TODO:
-         */
-        HTTP_Method method;
     };
 
     /**
