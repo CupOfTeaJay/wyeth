@@ -10,10 +10,10 @@
 namespace Wyeth
 {
     Postpoint::Postpoint(const std::string& uri,
-                         httplib::Client* const _httpsClient) noexcept
+                         void* const _httpsClient) noexcept
                          :
-                         uri(uri),
-                         _httpsClient(_httpsClient)
+                         uri{uri},
+                         _httpsClient{reinterpret_cast<httplib::Client* const>(_httpsClient)}
     {
     }
 

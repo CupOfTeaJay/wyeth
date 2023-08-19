@@ -25,7 +25,7 @@ namespace Wyeth
          * Constructor for the "Patchpoint" class.
          */
         Getpoint(const std::string& uri,
-                 httplib::Client* const _httpsClient) noexcept;
+                 void* const _httpsClient) noexcept;
 
         /**
          * Destructor for the "Patchpoint" class.

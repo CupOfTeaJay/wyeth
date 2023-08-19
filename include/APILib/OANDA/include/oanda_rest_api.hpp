@@ -11,13 +11,24 @@ namespace Wyeth
 {
     class OandaRestApi : public Api
     {
-        protected:
+        public:
 
         /**
          * Constructor for the "OandaApi" class.
-        */
+         */
         OandaRestApi(const std::string& authToken,
-                     const std::string& uri,
-                     const EndpointMap& endpoints) noexcept;
+                     const std::string& uri) noexcept;
+
+        /**
+         * Destructor for the "OandaApi" class.
+         */
+        virtual ~OandaRestApi() = default;
+
+        private:
+
+        /**
+         * Initializes the Oanda REST API's endpoints.
+         */
+        virtual const EndpointMap initializeEndpoints() noexcept override final;
     };
 }
