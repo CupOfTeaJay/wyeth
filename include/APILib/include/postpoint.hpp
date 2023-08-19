@@ -25,7 +25,7 @@ namespace Wyeth
          * Constructor for the "Postpoint" class.
          */
         Postpoint(const std::string& uri,
-                  void* const _httpsClient) noexcept;
+                  httplib::Client* const _httpsClient) noexcept;
 
         /**
          * Destructor for the "Postpoint" class.

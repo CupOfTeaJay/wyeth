@@ -25,7 +25,7 @@ namespace Wyeth
          * Constructor for the "Delpoint" class.
          */
         Delpoint(const std::string& uri,
-                 void* const _httpsClient) noexcept;
+                 httplib::Client* const _httpsClient) noexcept;
 
         /**
          * Destructor for the "Delpoint" class.

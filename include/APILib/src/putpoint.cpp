@@ -10,10 +10,10 @@
 namespace Wyeth
 {
     Putpoint::Putpoint(const std::string& uri,
-                       void* const _httpsClient) noexcept
+                       httplib::Client* const _httpsClient) noexcept
                        :
                        uri{uri},
-                       _httpsClient{reinterpret_cast<httplib::Client* const>(_httpsClient)}
+                       _httpsClient{_httpsClient}
     {
     }
 
