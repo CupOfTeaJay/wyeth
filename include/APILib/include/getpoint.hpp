@@ -33,6 +33,5 @@ namespace Wyeth
          * Queries the getpoint.
          */
         virtual const httplib::Result query() noexcept override final;
-
     };
 }
