@@ -37,6 +37,11 @@ namespace Wyeth
         httplib::Client* const getHttpsClient() const noexcept;
 
         /**
+         * Gets the API's endpoints.
+         */
+        const EndpointMap& getEndpoints() const noexcept;
+
+        /**
          * Queries one of the API's endpoints.
          */
         httplib::Result queryEndpoint(const std::string& key) const noexcept;

@@ -23,6 +23,11 @@ namespace Wyeth
         public:
 
         /**
+         * Destructor for the "Endpoint" struct.
+         */
+        virtual ~Endpoint() = default;
+
+        /**
          * Queries the endpoint.
          */
         virtual const httplib::Result query() noexcept = 0;
@@ -33,10 +38,5 @@ namespace Wyeth
          * Constructor for the "Endpoint" class.
          */
         Endpoint() noexcept = default;
-
-        /**
-         * Destructor for the "Endpoint" struct.
-         */
-        virtual ~Endpoint() = default;
     };
 }

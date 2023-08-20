@@ -21,7 +21,10 @@ namespace Wyeth
     Api::~Api()
     {
         delete this->_httpsClient;
-        // TODO: Figure out how to delete all "endpoint* const" in endpoints data member.
+    }
+
+    const EndpointMap& Api::getEndpoints() const noexcept {
+        return this->endpoints;
     }
 
     httplib::Client* const Api::getHttpsClient() const noexcept {

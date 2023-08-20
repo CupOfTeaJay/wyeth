@@ -22,7 +22,7 @@ namespace Wyeth
         /**
          * Destructor for the "OandaApi" class.
          */
-        virtual ~OandaRestApi() = default;
+        virtual ~OandaRestApi();
 
         private:
 

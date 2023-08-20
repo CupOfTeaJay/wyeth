@@ -20,6 +20,17 @@ namespace Wyeth
     {
     }
 
+    OandaStreamApi::~OandaStreamApi()
+    {
+        EndpointMap::const_iterator i{this->getEndpoints().begin()};
+        EndpointMap::const_iterator end{this->getEndpoints().end()};
+        while(i != end)
+        {
+            delete i->second;
+            ++i;
+        }
+    }
+
     const EndpointMap OandaStreamApi::initializeEndpoints() noexcept {
         httplib::Client* const _parentClt{this->getHttpsClient()};
         return EndpointMap
