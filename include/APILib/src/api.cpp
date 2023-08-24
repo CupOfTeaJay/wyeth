@@ -13,22 +13,21 @@ namespace Wyeth
              const EndpointMap& endpoints) noexcept
              :
              uri{uri},
-             _httpsClient{new httplib::Client{this->uri}},
+             httpsClient{httplib::Client{uri}},
              endpoints{endpoints}
     {
     }
 
     Api::~Api()
     {
-        delete this->_httpsClient;
     }
 
     const EndpointMap& Api::getEndpoints() const noexcept {
         return this->endpoints;
     }
 
-    httplib::Client* const Api::getHttpsClient() const noexcept {
-        return this->_httpsClient;
+    const httplib::Client& Api::getHttpsClient() const noexcept {
+        return this->httpsClient;
     }
 
     httplib::Result Api::queryEndpoint(const std::string& key) const noexcept {

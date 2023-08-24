@@ -34,7 +34,7 @@ namespace Wyeth
         /**
          * Gets the API's HTTPS client association.
          */
-        httplib::Client* const getHttpsClient() const noexcept;
+        const httplib::Client& getHttpsClient() const noexcept;
 
         /**
          * Gets the API's endpoints.
@@ -61,7 +61,7 @@ namespace Wyeth
         /**
          * The Oanda REST API's HTTPS client association.
          */
-        httplib::Client* const _httpsClient;
+        httplib::Client httpsClient;
 
         /**
          * The API's endpoints.
