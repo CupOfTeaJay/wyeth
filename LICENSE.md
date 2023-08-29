@@ -3,17 +3,14 @@ License text copyright (c) 2020 MariaDB Corporation Ab, All Rights Reserved.
 
 Parameters
 
-Licensor:             HashiCorp, Inc.
-Licensed Work:        Terraform 1.6.0-beta1. The Licensed Work is (c) 2023 HashiCorp, Inc.
+Licensor:             Thrisys LLC
+Licensed Work:        Wyeth. The Licensed Work is (c) 2023 Thrisys LLC.
 Additional Use Grant: You may make production use of the Licensed Work,
                       provided such use does not include offering the Licensed Work
                       to third parties on a hosted or embedded basis which is
-                      competitive with HashiCorp's products.
+                      competitive with Thrisys' products.
 Change Date:          Four years from the date the Licensed Work is published.
-Change License:       MPL 2.0
-
-For information about alternative licensing arrangements for the Licensed Work,
-please contact licensing@hashicorp.com.
+Change License:       GNU AGPLv3
 
 Notice
 
