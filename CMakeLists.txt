@@ -13,7 +13,7 @@ project(wyeth
 
 add_executable(wyeth src/main.cpp)
 
-add_subdirectory(include/HTTPLib)
+add_subdirectory(external/HTTPLib)
 add_subdirectory(include/APILib)
 
 target_link_libraries(wyeth PUBLIC APILib)
